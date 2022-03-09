@@ -39,7 +39,14 @@ h1,h2,h3,p,a,i,span,button,img{
 }
 i{cursor: pointer;}
 
+.la-instagram:hover,.la-github:hover,.la-linkedin-in:hover{
+    color: var(--corPink3);
+    background-color: var(--cor3);
+}
+
 .load{
+    position: relative;
+    z-index:99;
     width:100%;
     height:100%;
     background-color: var(--corPink3);
@@ -399,6 +406,7 @@ div.bg.historia{
 .historia__btn{
     width:150px;
     height:44px;
+    margin-top:20px;
     color:var(--cor);
     font-size:16px;
     cursor:pointer;
@@ -532,8 +540,11 @@ div.bg.historia{
     padding:0 2%;
 }
 
-
-
+/* Serie.html */
+.Serie{
+    width:100%;
+    height:79%;
+}
 
 
 @keyframes load{
@@ -576,9 +587,6 @@ div.bg.historia{
         left: 0;
         right: 0;
         text-align: center;
-    }
-    .autor h2{
-        color:var(--corBlue);
     }
     .autor__icons i{
         float: none;
@@ -660,7 +668,7 @@ div.bg.historia{
         text-align: center;
     }
     .descrocao ul li p{
-        font-size:12px;
+        font-size:18px;
     }
     .width__right__habilidades{
         width:100%;
@@ -674,8 +682,63 @@ div.bg.historia{
 
 /* Mobile */
 @media screen and (max-width:720px){
+    .menu-mobile{
+        position: relative;
+        z-index:3;
+        visibility:visible;
+        width:100%;
+        height:60px;
+        text-align: right;
+        animation: showRight 1s ease ;
+    }
+    .menu-mobile i{
+        margin:15px;
+        font-size:35px;
+        color: var(--cor);
+    }
+    .menu-mobile i:active{
+        color: var(--corPink);
+    }
+    .menu-mobile ul{
+        transition:.3s;
+        opacity:0;
+        text-align: center;
+    }
+    .menu-mobile ul.active{
+        width:100%;
+        visibility:visible;
+        text-align: center;
+        opacity:1;
+    }
+    .menu-mobile ul li{
+        
+        border-bottom:1px solid #fff;
+        background-color:var(--corPink3);
+        border-bottom:1px solid #0D0D0D;
+    }
+    .menu-mobile ul li:hover{
+        background-color:var(--cor3);
+        transition:.5s;
+    }
+    .menu-mobile ul li a{
+        text-decoration:none;
+        display:block;
+        padding:10px 0;
+        color:var(--cor);
+        font-family:var(--font);
+        font-weight:bold;
+    }
+    .menu-mobile ul li:hover a{
+        color:var(--cor);
+    }
+
+    .header__habilidades{
+        display:none;
+    }
+
     .autor{
         top:0;
+        display:none;
     }
     .autor h2{
         font-size:20px;
@@ -761,6 +824,7 @@ div.bg.historia{
     }
     .historia p{
         overflow: hidden scroll;
+        font-size:15px;
         height:200px;
     }
     .width__left__regiao{
@@ -793,7 +857,7 @@ div.bg.historia{
         max-width:700px;
         height:100px;
         line-height:24px;
-        font-size:16px;
+        font-size:18px;
         font-family:var(--font);
         color:var(--cor);
         text-transform:lowercase;
@@ -810,55 +874,6 @@ div.bg.historia{
 
 /* Mobile */
 @media screen and (max-width:500px){
-    .menu-mobile{
-        position: relative;
-        z-index:3;
-        visibility:visible;
-        width:100%;
-        height:60px;
-        text-align: right;
-        animation: showRight 1s ease ;
-    }
-    .menu-mobile i{
-        margin:15px;
-        font-size:35px;
-        color: var(--cor);
-    }
-    .menu-mobile i:active{
-        color: var(--corPink);
-    }
-    .menu-mobile ul{
-        transition:.3s;
-        opacity:0;
-        text-align: center;
-    }
-    .menu-mobile ul.active{
-        width:100%;
-        visibility:visible;
-        text-align: center;
-        opacity:1;
-    }
-    .menu-mobile ul li{
-        padding:10px 0;
-        border-bottom:1px solid #fff;
-        background-color:var(--corPink3);
-        border-bottom:1px solid #0D0D0D;
-    }
-    .menu-mobile ul li:hover{
-        background-color:var(--cor3);
-        transition:.5s;
-    }
-    .menu-mobile ul li a{
-        text-decoration:none;
-        display:block;
-        color:var(--cor);
-        font-family:var(--font);
-        font-style:italic;
-        font-weight:bold;
-    }
-    .menu-mobile ul li:hover a{
-        color:var(--cor);
-    }
     .autor{
         transition:1s;
         display:none;
@@ -890,7 +905,7 @@ div.bg.historia{
     }
 
     .width__left__habilidades > ul > li > img{
-        width:80%;
+        width:100%;
     }
 
     .width__right__habilidades video{
@@ -899,6 +914,18 @@ div.bg.historia{
         height:auto;
         margin-top:25px;
         padding:0 5%;
+    }
+
+    .descrocao ul li p{
+        font-size:15px;
+    }
+
+    /* Serie.html */
+    .Serie{
+        position:fixed;
+        bottom:0;
+        width:100%;
+        height:85%;
     }
 
 }

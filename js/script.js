@@ -1,4 +1,4 @@
-//Mebu Mobile
+// Mebu Mobile
 const btnMobile = document.querySelector('.menu-mobile i'),
       menuMobile = document.querySelector('.menu-mobile ul')
 
@@ -6,21 +6,24 @@ btnMobile.addEventListener('click', ()=>{
     menuMobile.classList.toggle('active')
 })
 
-//Load
+// Load delay 
 
 let Loading = document.querySelector('.load')
 
 window.addEventListener('load',()=>{
+  setTimeout(function(){
     Loading.style.display = 'none'
+  },1500)
+   
 })
 
-//Function Habilidades
+// Function Habilidades
 
 const imgAtaque = document.querySelectorAll('.width__left__habilidades ul li img')
 
 const info = document.querySelectorAll('.descrocao li')
 
-//INFO
+// INFO
 const info0 = document.querySelector('#info0'),
 info1 = document.querySelector('#info1'),
 info2 = document.querySelector('#info2'),
@@ -37,7 +40,7 @@ video4 = document.querySelector('#video4')
 const VideoHabilidade = document.querySelectorAll('.width__right__habilidades ul li')
 
 
-//remove info
+// remove info
 imgAtaque.forEach(function(value){
     value.addEventListener('click',()=>{
         for(i = 0; i < info.length; i++){
@@ -45,7 +48,7 @@ imgAtaque.forEach(function(value){
         }
     })
 })
-//remove video
+// remove video
 imgAtaque.forEach(function(value){
     value.addEventListener('click',()=>{
         for(i = 0; i < VideoHabilidade.length; i++){
@@ -54,7 +57,7 @@ imgAtaque.forEach(function(value){
     })
 })
 
-
+// (active Video) && (active Info)
 imgAtaque.forEach(function(value,index){
     value.addEventListener('click',()=>{
       if(index == 0){
