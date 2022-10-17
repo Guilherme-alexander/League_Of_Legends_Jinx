@@ -74,7 +74,6 @@ i{cursor: pointer;}
     box-shadow:0 0 10px var(--cor3);
 }
 
-
 .relative{
     position: relative;
     z-index:2;
@@ -284,23 +283,22 @@ header nav ul li{
     position: relative;
     display:inline-block;
     margin:0 15px;  
-    transition:2s;
 }
 
 header nav ul li:hover::after{
     content:'';
     position: absolute;
-    left:0;
-    bottom:0;
-    width:100%;
+    left:-5px;
+    bottom:0px;
+    width:120%;
     height:100%;
+    border-radius:3px;
     z-index: 2;
-    transform: skewX(50deg);
     background-color: var(--corPink3);
     animation: MenuAnima;
     animation-iteration-count:1;
     animation-duration:1s;
-    transition:2s;
+    transition:0.1s;
 }
 
 header nav ul li a{
@@ -467,6 +465,7 @@ div.bg.historia{
 }
 .width__left__habilidades > ul > li{
     margin-right:40px;
+    cursor: pointer;
     transition:.5s;
 }
 .width__left__habilidades > ul > li:hover{
@@ -560,14 +559,17 @@ div.bg.historia{
         transform:translateX(15px);
     }
 }
+
 @keyframes MenuAnima{
     0%{
-        transform: skewX(50deg) translateX(-20px);
+        
+        width:3px;
     }
     100%{
-        transform:skewX(50deg) translateX(0)
+        width:120%;
     }
 }
+
 @keyframes showRight {
     from {
       opacity: 0;
@@ -682,6 +684,7 @@ div.bg.historia{
 
 /* Mobile */
 @media screen and (max-width:720px){
+
     .menu-mobile{
         position: relative;
         z-index:3;
@@ -787,6 +790,7 @@ div.bg.historia{
         display: flex;
         justify-content:center;
         align-items: center;
+        display: none;
     }
     header ul li a {
         font-size:18px;
@@ -846,9 +850,11 @@ div.bg.historia{
 
     .width__left__habilidades > ul > li{
         margin-right:10px;
+        cursor: pointer;
     }
     .width__left__habilidades > ul > li > img{
         width: 80%;
+        cursor: pointer;
     }
 
     .descrocao ul li p{
@@ -869,7 +875,6 @@ div.bg.historia{
         padding:0 2%;
     }
     
-
 }
 
 /* Mobile */
